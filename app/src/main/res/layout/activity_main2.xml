@@ -76,7 +76,7 @@
 
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
-<!--Added here-->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
