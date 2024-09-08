@@ -81,7 +81,6 @@
     <color name="dark_red">#FF8B0000</color>
     <color name="dark_goldenrod">#FFB8860B</color>
     <color name="dark_sienna">#FF8A3324</color>
-    <color name="dark_slate_gray" tools:ignore="DuplicateDefinition">#FF2F4F4F</color>
     <color name="light_gold">#FFFFE033</color>
     <color name="light_lavender">#FFE6E6FA</color>
     <color name="light_burgundy">#FF800020</color>

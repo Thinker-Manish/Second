@@ -95,13 +95,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="Categories"
+                    android:text="Most Bought !!"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="4dp"
                     android:fontFamily="@font/calibri"
                     android:padding="8dp"
                     android:textSize="18dp"
-                    android:textColor="#FF000000"/>
+                    android:textColor="@color/white"/>
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
-                            app:cardCornerRadius="8dp"
+                            app:cardCornerRadius="16dp"
                             app:cardElevation="4dp"
                             app:cardUseCompatPadding="true"
                             app:contentPadding="12dp">
@@ -126,8 +126,8 @@
                                 android:orientation="vertical">
 
                                 <ImageView
-                                    android:layout_width="36dp"
-                                    android:layout_height="36dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="91dp"
                                     android:src="@drawable/watch" />
                                 <RelativeLayout
                                     android:layout_width="match_parent"
@@ -139,7 +139,7 @@
                                         android:text="Watches"
                                         android:textSize="16sp"
                                         android:fontFamily="@font/calibri"
-                                        android:textColor="#3c3c3c"/>
+                                        android:textColor="@color/white"/>
                                     <ImageView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -163,9 +163,9 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
                                 <ImageView
-                                    android:layout_width="36dp"
-                                    android:layout_height="36dp"
-                                    android:src="@drawable/watch"/>
+                                    android:layout_width="match_parent"
+                                    android:layout_height="91dp"
+                                    android:src="@drawable/shoes"/>
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -173,10 +173,10 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Watches"
+                                        android:text="Shoes"
                                         android:textSize="16sp"
                                         android:fontFamily="@font/calibri"
-                                        android:textColor="#3c3c3c"/>
+                                        android:textColor="@color/white"/>
                                     <ImageView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -200,9 +200,9 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
                                 <ImageView
-                                    android:layout_width="36dp"
-                                    android:layout_height="36dp"
-                                    android:src="@drawable/watch"/>
+                                    android:layout_width="match_parent"
+                                    android:layout_height="91dp"
+                                    android:src="@drawable/airpods"/>
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -210,10 +210,10 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Watches"
+                                        android:text="Earbuds"
                                         android:textSize="16sp"
                                         android:fontFamily="@font/calibri"
-                                        android:textColor="#3c3c3c"/>
+                                        android:textColor="@color/white"/>
                                     <ImageView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
