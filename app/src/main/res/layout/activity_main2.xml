@@ -10,14 +10,14 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00BCD4"
-        android:padding="24dp"
+        android:background="#6055D8"
+        android:padding="16dp"
         app:elevation="0dp">
 
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/toolbar"/>
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/toolbar"/>-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="Discover"
                     android:layout_marginStart="64dp"
-                    android:textSize="24dp"
+                    android:textSize="24sp"
                     android:textColor="#FFFFFFFF"/>
 
                 <ImageView
@@ -71,7 +71,7 @@
                     android:padding="12dp"
                     android:textColor="@color/black"
                     android:textColorHint="#aeaeae"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp" />
             </LinearLayout>
 
         </LinearLayout>

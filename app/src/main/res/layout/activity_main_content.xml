@@ -6,7 +6,7 @@
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00BCD4">
+        android:background="#6055D8">
         <ImageButton
             android:id="@+id/buttonDrawerToggle"
             android:layout_width="wrap_content"
