@@ -1,6 +1,7 @@
 package com.example.multi;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,8 +11,14 @@ import androidx.core.view.WindowInsetsCompat;
 import android.view.View;
 import android.widget.LinearLayout;
 import androidx.activity.EdgeToEdge;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity2 extends AppCompatActivity {
+    DrawerLayout drawerLayout;
+    ImageButton buttonDrawerToggle;
+    NavigationView navigationView;
 
     // Array of drawable resource IDs for images
     int[] images = {
@@ -39,10 +46,12 @@ public class MainActivity2 extends AppCompatActivity {
             return insets;
         });
 
+
         // Get the parent layout that contains the card views
         LinearLayout cardLayout = findViewById(R.id.card_container);
 
         // Loop through each card and set the corresponding image and product name
+
         for (int i = 0; i < cardLayout.getChildCount(); i++) {
             View view = cardLayout.getChildAt(i);
 

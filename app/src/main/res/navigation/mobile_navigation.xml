@@ -10,4 +10,10 @@
         android:name="com.example.multi.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.multi.MainActivity2"
+        android:label="activity_main2"
+        tools:layout="@layout/activity_main2"
+        />
 </navigation>
