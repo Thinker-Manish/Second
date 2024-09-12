@@ -225,7 +225,7 @@
 
                     </LinearLayout>
                 </HorizontalScrollView>
-<!--new-->
+
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>
