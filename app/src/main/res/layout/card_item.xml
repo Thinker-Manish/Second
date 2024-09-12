@@ -17,6 +17,7 @@
 
         <!-- ImageView for the dynamic image -->
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="91dp"
             android:src="@drawable/watch" />
@@ -29,11 +30,12 @@
 
             <!-- TextView for Label -->
             <TextView
+                android:id="@+id/product_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Watches"
-                android:textSize="16sp"
-                android:fontFamily="@font/calibri"
+               android:textSize="16sp"
+             android:fontFamily="@font/calibri"
                 android:textColor="#3c3c3c"/>
 
             <!-- Forward Arrow Icon -->
@@ -49,3 +51,4 @@
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
+
