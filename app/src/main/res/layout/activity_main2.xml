@@ -99,132 +99,32 @@
                     android:fontFamily="@font/calibri"
                     android:padding="8dp"
                     android:textSize="18dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:scrollbars="none">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:padding="8dp">
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            app:cardCornerRadius="16dp"
-                            app:cardElevation="4dp"
-                            app:cardUseCompatPadding="true"
-                            app:contentPadding="12dp">
-                            <LinearLayout
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="91dp"
-                                    android:src="@drawable/watch" />
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Watches"
-                                        android:textSize="16sp"
-                                        android:fontFamily="@font/calibri"
-                                        android:textColor="@color/white"/>
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:src="@drawable/round_arrow_forward_24"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_alignParentTop="true"/>
-                                </RelativeLayout>
-                            </LinearLayout>
+                        <!-- Include the card component multiple times -->
+                        <include
+                            layout="@layout/card_item" />
 
-                        </androidx.cardview.widget.CardView>
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="4dp"
-                            app:cardUseCompatPadding="true"
-                            app:contentPadding="12dp">
-                            <LinearLayout
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="91dp"
-                                    android:src="@drawable/shoes"/>
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Shoes"
-                                        android:textSize="16sp"
-                                        android:fontFamily="@font/calibri"
-                                        android:textColor="@color/white"/>
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:src="@drawable/round_arrow_forward_24"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_alignParentTop="true"/>
-                                </RelativeLayout>
-                            </LinearLayout>
+                        <include
+                            layout="@layout/card_item" />
 
-                        </androidx.cardview.widget.CardView>
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="4dp"
-                            app:cardUseCompatPadding="true"
-                            app:contentPadding="12dp">
-                            <LinearLayout
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="91dp"
-                                    android:src="@drawable/airpods"/>
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Earbuds"
-                                        android:textSize="16sp"
-                                        android:fontFamily="@font/calibri"
-                                        android:textColor="@color/white"/>
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:src="@drawable/round_arrow_forward_24"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_alignParentTop="true"/>
-                                </RelativeLayout>
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
+                        <include
+                            layout="@layout/card_item" />
 
                     </LinearLayout>
                 </HorizontalScrollView>
+
 
             </LinearLayout>
         </ScrollView>
