@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -15,6 +16,62 @@
             android:background="@android:color/transparent"
             android:padding="5dp"/>
     </Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Most Bought !!"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/calibri"
+                    android:padding="8dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/card_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <!-- Include the card component multiple times -->
+                        <include
+                            layout="@layout/card_item" />
+
+                        <include
+                            layout="@layout/card_item"
+                            />
+
+                        <include
+                            layout="@layout/card_item" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
 
 
 </LinearLayout>

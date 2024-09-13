@@ -5,7 +5,7 @@ plugins {
 android {
     namespace = "com.example.multi"
     compileSdk = 34
-
+   
     defaultConfig {
         applicationId = "com.example.multi"
         minSdk = 24
@@ -42,4 +42,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+
+
 }

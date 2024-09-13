@@ -12,6 +12,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+
+
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageButton buttonDrawerToggle;
@@ -20,11 +22,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
-        drawerLayout = findViewById(R.id.drawerLayout);
+
+        drawerLayout = findViewById(R.id.drawerLayout) ;
         buttonDrawerToggle = findViewById(R.id.buttonDrawerToggle);
         navigationView = findViewById(R.id.navigationView);
+
 
         buttonDrawerToggle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,4 +54,5 @@ public class MainActivity extends AppCompatActivity {
         });
 //        hi
     }
+
 }
