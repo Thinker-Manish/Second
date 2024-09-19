@@ -31,12 +31,12 @@
             <!-- TextView for Label -->
             <TextView
                 android:id="@+id/product_name"
-                android:layout_width="wrap_content"
+                android:layout_width="78dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri"
                 android:text="Watches"
-               android:textSize="16sp"
-             android:fontFamily="@font/calibri"
-                android:textColor="#3c3c3c"/>
+                android:textColor="#3c3c3c"
+                android:textSize="14sp" />
 
             <!-- Forward Arrow Icon -->
             <ImageView

@@ -57,19 +57,36 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Most Bought Section Title -->
-            <TextView
+            <!-- Most Bought Section with Title and See All Button -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:fontFamily="@font/calibri"
-                android:padding="8dp"
-                android:text="Featured !!"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="16dp"
+                android:padding="8dp">
+
+                <!-- Section Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibri"
+                    android:text="Featured !!"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- See All Button -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/purple"
+                    android:textSize="14sp"
+                    android:gravity="end" />
+            </LinearLayout>
 
             <!-- HorizontalScrollView for products -->
             <HorizontalScrollView
@@ -98,33 +115,58 @@
                 </LinearLayout>
 
             </HorizontalScrollView>
-            <TextView
+
+            <!-- Most Popular Section -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:fontFamily="@font/calibri"
-                android:padding="8dp"
-                android:text="Most Popular !!"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:layout_marginTop="16dp"
+                android:padding="8dp">
+
+                <!-- Section Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibri"
+                    android:text="Most Bought !!"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- See All Button -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/purple"
+                    android:textSize="14sp"
+                    android:gravity="end" />
+            </LinearLayout>
+
+            <!-- HorizontalScrollView for popular products -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:scrollbars="none">
+
                 <LinearLayout
                     android:id="@+id/card_container_popular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:padding="8dp">
+
                     <include
                         layout="@layout/card_item" />
+
                     <include
                         layout="@layout/card_item" />
+
                     <include
                         layout="@layout/card_item" />
 
@@ -132,11 +174,7 @@
 
             </HorizontalScrollView>
 
-
-
-
         </LinearLayout>
-
 
     </ScrollView>
 

@@ -1,37 +1,53 @@
 package com.example.multi;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity2 extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    ImageButton buttonDrawerToggle;
+    ImageButton buttonCategoriesDrawerToggle;
     NavigationView navigationView;
 
     // Array of drawable resource IDs for images
     int[] images = {
-            R.drawable.shoes,    // shoes.jpg
-            R.drawable.watch,    // watch.jpg
-            R.drawable.airpods   // AirPods.jpg
+            R.drawable.phones,    // shoes.jpg
+            R.drawable.laptops,    // watch.jpg
+            R.drawable.cameras,   // AirPods.jpg
+            R.drawable.headphones,
+            R.drawable.smartwatch
+
     };
 
     // Array of product names
     String[] productNames = {
-            "Shoes",   // Product name for shoes
-            "Watch",   // Product name for watch
-            "AirPods"  // Product name for AirPods
+            "Mobile ",   // Product name for shoes
+            "Laptops",   // Product name for watch
+            "Cameras", // Product name for AirPods
+            "Headphones",
+            "Smartwatch"
+
+
+    };
+    String[]Fashion={
+            "Men’s Clothing",
+    "Women’s Clothing",
+    "Footwear",
+            "Watches",
+    "Bags & Wallet"
+
     };
 
     @Override
@@ -39,12 +55,22 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        drawerLayout = findViewById(R.id.drawerLayout);
+        buttonCategoriesDrawerToggle = findViewById(R.id.buttonCategoriesDrawerToggle);
+        navigationView = findViewById(R.id.navigationView);
+        buttonCategoriesDrawerToggle.setOnClickListener(view -> drawerLayout.open());
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.home) {
+                Toast.makeText(MainActivity2.this, "Menu Clicked", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity2.this,MainActivity.class);
+                startActivity(intent);
+            }
+            drawerLayout.close();
+            return false;
         });
+
+
 
 
         // Get the parent layout that contains the card views
@@ -65,6 +91,7 @@ public class MainActivity2 extends AppCompatActivity {
                 textView.setText(productNames[i]);
             }
         }
+
     }
 }
 
