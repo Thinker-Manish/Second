@@ -23,9 +23,9 @@ public class MainActivity2 extends AppCompatActivity {
 
     // Array of drawable resource IDs for Electronics
     int[] electronicsImages = {
-            R.drawable.phones,    // Mobile image
-            R.drawable.laptops,    // Laptop image
-            R.drawable.cameras,   // Camera image
+            R.drawable.phones,
+            R.drawable.laptops,
+            R.drawable.cameras,
             R.drawable.headphones,
             R.drawable.smartwatch
     };
@@ -41,20 +41,34 @@ public class MainActivity2 extends AppCompatActivity {
 
     // Array of drawable resource IDs for Fashion
     int[] fashionImages = {
-            R.drawable.men_clothing,   // Men's clothing image
-
-            R.drawable.shoes,        // Footwear image
-            R.drawable.watch,         // Watches image
-            R.drawable.bags_wallets     // Bags and Wallets image
+            R.drawable.men_clothing,
+            R.drawable.shoes,
+            R.drawable.watch,
+            R.drawable.bags_wallets
     };
 
     // Array of Fashion product names
     String[] fashionProductNames = {
             "Clothing",
-
             "Footwears",
             "Watches",
             "Bags"
+    };
+
+    // Array of drawable resource IDs for Books
+    int[] bookImages = {
+            R.drawable.philosophy,
+            R.drawable.psychology,
+            R.drawable.politics,
+            R.drawable.fiction
+    };
+
+    // Array of Books product names
+    String[] bookProductNames = {
+            "Philosophy",
+            "Psychology",
+            "Politics",
+            "Fiction"
     };
 
     @Override
@@ -84,6 +98,9 @@ public class MainActivity2 extends AppCompatActivity {
 
         // Set up Fashion card views
         setupCardViews(R.id.card_container_popular, fashionImages, fashionProductNames);
+
+        // Set up Books card views
+        setupCardViews(R.id.card_books, bookImages, bookProductNames);
     }
 
     // Helper method to set up card views
