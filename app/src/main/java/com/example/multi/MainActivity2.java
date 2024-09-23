@@ -2,7 +2,6 @@ package com.example.multi;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -10,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -74,7 +72,6 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
 
         // Drawer and navigation setup
@@ -119,6 +116,16 @@ public class MainActivity2 extends AppCompatActivity {
             if (i < images.length) {
                 imageView.setImageResource(images[i]);
                 textView.setText(productNames[i]);
+
+                // Set a click listener to redirect for phones (Mobile)
+                final String productName = productNames[i];
+                imageView.setOnClickListener(v -> {
+                    if ("Mobile".equals(productName)) {
+                        // If the product is "Mobile", launch the activity that displays phones.xml
+                        Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+                        startActivity(intent);
+                    }
+                });
             }
         }
     }
