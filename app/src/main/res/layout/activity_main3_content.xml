@@ -1,36 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity3">
 
-
     <GridLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:rowCount="2"
-        android:columnCount="2">
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="16dp"
+        android:rowCount="10"
+
+        tools:context=".MainActivity3">
+
+        <!-- Your grid items -->
+        <include
+            layout="@layout/card_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1" />
 
         <include
-            layout="@layout/card_item" />
-        <!-- Add more include tags or other views as needed to fill the grid -->
-        <include
-            layout="@layout/card_item" />
-        <include
-        layout="@layout/card_item" />
-        <include
-            layout="@layout/card_item" />
-        <include
-            layout="@layout/card_item" />
-        <include
-            layout="@layout/card_item" /><include
-        layout="@layout/card_item" />
-        <include
-        layout="@layout/card_item" />
+            layout="@layout/card_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1" />
 
+        <include
+            layout="@layout/card_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1" />
 
-
+        <include
+            layout="@layout/card_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1" />
     </GridLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
