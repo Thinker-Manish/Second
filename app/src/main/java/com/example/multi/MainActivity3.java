@@ -88,8 +88,19 @@ public class MainActivity3 extends AppCompatActivity {
 
                 // Set click listener for each card view
                 final String productName = mobileNames[i];
+                final int productImageResId = mobileImages[i]; // Assuming you want to pass the image resource ID
+                final String productPrice = "$99.99"; // Replace this with actual price
+                final String productDescription = "Description for " + productName; // Replace with actual description
+
                 cardView.setOnClickListener(v -> {
-                    // Show a toast message on product click
+                    Intent intent = new Intent(MainActivity3.this, ProductActivity.class);
+                    intent.putExtra("product_name", productName);
+                    intent.putExtra("product_image_res_id", productImageResId);
+                    intent.putExtra("product_price", productPrice);
+                    intent.putExtra("product_description", productDescription);
+                    startActivity(intent);
+
+                    // Optionally show a Toast message
                     Toast.makeText(MainActivity3.this, productName + " Clicked", Toast.LENGTH_SHORT).show();
                 });
             }

@@ -18,5 +18,13 @@
         android:id="@+id/navOrder"
         android:icon="@drawable/round_shopping_cart_24"
         android:title="Order" />
+
+    <item
+        android:id="@+id/navSignup"
+        android:icon="@drawable/round_shopping_cart_24"
+        android:title="Signup" />
+
 </menu>
+
+
 
