@@ -25,7 +25,7 @@ public class MainActivity2 extends AppCompatActivity {
             R.drawable.laptops,
             R.drawable.cameras,
             R.drawable.headphones,
-            R.drawable.smartwatch
+
     };
 
     // Array of Electronics product names
@@ -34,7 +34,7 @@ public class MainActivity2 extends AppCompatActivity {
             "Laptops",
             "Cameras",
             "Headphones",
-            "Smartwatch"
+
     };
 
     // Array of drawable resource IDs for Fashion
@@ -126,6 +126,11 @@ public class MainActivity2 extends AppCompatActivity {
                         startActivity(intent);
                     } else if ("Laptops".equals(productName)) {
                         Intent intent=new Intent(MainActivity2.this,MainActivity4.class);
+                        startActivity(intent);
+
+                    }
+                    else if ("Cameras".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,MainActivity5.class);
                         startActivity(intent);
 
                     }

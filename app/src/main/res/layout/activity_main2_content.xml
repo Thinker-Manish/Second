@@ -140,8 +140,7 @@
                             layout="@layout/card_item" />
                         <include
                             layout="@layout/card_item" />
-                        <include
-                            layout="@layout/card_item" />
+
 
                     </LinearLayout>
                 </HorizontalScrollView>
