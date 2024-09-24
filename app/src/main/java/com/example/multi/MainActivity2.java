@@ -124,6 +124,10 @@ public class MainActivity2 extends AppCompatActivity {
                         // If the product is "Mobile", launch the activity that displays phones.xml
                         Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
                         startActivity(intent);
+                    } else if ("Laptops".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,MainActivity4.class);
+                        startActivity(intent);
+
                     }
                 });
             }

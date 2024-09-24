@@ -15,7 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity3 extends AppCompatActivity {
+public class MainActivity4 extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageButton buttonCategoriesDrawerToggle;
@@ -23,45 +23,45 @@ public class MainActivity3 extends AppCompatActivity {
     GridLayout gridLayout;
 
     int[] mobileImages = {
-            R.drawable.apple,
-            R.drawable.samsung,
-            R.drawable.oneplus,
-            R.drawable.nothingg,
-            R.drawable.xiaomi,
-            R.drawable.vivo,
-            R.drawable.oppo,
-            R.drawable.motorola,
+            R.drawable.macbook,
             R.drawable.asusl,
-            R.drawable.realme
+            R.drawable.hp,
+            R.drawable.dell,
+            R.drawable.samsungl,
+            R.drawable.lenovo,
+            R.drawable.acer,
+            R.drawable.razer,
+            R.drawable.msi,
+            R.drawable.alienware
     };
 
     String[] mobileNames = {
-            "Apple",
-            "Samsung",
-            "Oneplus",
-            "Nothing",
-            "Xiaomi",
-            "Vivo",
-            "Oppo",
-            "Motorola",
+            "Macbook",
             "Asus",
-            "Realme"
+            "HP",
+            "Dell",
+            "Samsung",
+            "Lenovo",
+            "Acer",
+            "Razer Blade",
+            "MSI",
+            "Alienware"
     };
 
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main4);
 
         // Initialize views
         buttonCategoriesDrawerToggle = findViewById(R.id.buttonCategoriesDrawerToggle);
         navigationView = findViewById(R.id.navigationView);
-        gridLayout = findViewById(R.id.main); // Match ID with XML
+        gridLayout = findViewById(R.id.mainLap); // Match ID with XML
 
         // Set up button to navigate back to MainActivity2 (Categories page)
         buttonCategoriesDrawerToggle.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity3.this, MainActivity2.class);
+            Intent intent = new Intent(MainActivity4.this, MainActivity2.class);
             startActivity(intent);
         });
 
@@ -90,7 +90,7 @@ public class MainActivity3 extends AppCompatActivity {
                 final String productName = mobileNames[i];
                 cardView.setOnClickListener(v -> {
                     // Show a toast message on product click
-                    Toast.makeText(MainActivity3.this, productName + " Clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity4.this, productName + " Clicked", Toast.LENGTH_SHORT).show();
                 });
             }
         }
