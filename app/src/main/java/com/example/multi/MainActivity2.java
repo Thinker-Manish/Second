@@ -48,7 +48,7 @@ public class MainActivity2 extends AppCompatActivity {
     // Array of Fashion product names
     String[] fashionProductNames = {
             "Clothing",
-            "Footwears",
+            "Shoes",
             "Watches",
             "Bags"
     };
@@ -139,6 +139,23 @@ public class MainActivity2 extends AppCompatActivity {
                         startActivity(intent);
 
                     }
+                    else if ("Clothing".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,ClothingActivity.class);
+                        startActivity(intent);
+
+                    }
+                    else if ("Shoes".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,Shoes.class);
+                        startActivity(intent);
+
+                    }
+                    else if ("Watches".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,Watches.class);
+                        startActivity(intent);
+
+                    }
+
+
                 });
             }
         }
