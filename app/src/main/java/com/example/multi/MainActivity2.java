@@ -134,6 +134,11 @@ public class MainActivity2 extends AppCompatActivity {
                         startActivity(intent);
 
                     }
+                    else if ("Headphones".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,HeadphonesCActivity.class);
+                        startActivity(intent);
+
+                    }
                 });
             }
         }

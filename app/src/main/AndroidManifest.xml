@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Multi"
         tools:targetApi="31">
         <activity
+            android:name=".HeadphonesCActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity5"
             android:exported="false" />
         <activity
@@ -39,8 +42,6 @@
         </activity>
         <activity android:name=".Signup" />
         <activity android:name=".ProductActivity" />
-
-
     </application>
 
 </manifest>

@@ -15,44 +15,45 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity5 extends AppCompatActivity {
+public class HeadphonesCActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageButton buttonCategoriesDrawerToggle;
     NavigationView navigationView;
     GridLayout gridLayout;
 
-    int[] cameraImages = {
-            R.drawable.canon,
-            R.drawable.nikon,
-            R.drawable.sony,
-            R.drawable.fujifilm,
-            R.drawable.panasonic,
-            R.drawable.olympus,
-            R.drawable.leica,
-            R.drawable.gopro,
-            R.drawable.pentax,
-            R.drawable.hasselblad
+    int[] mobileImages = {
+            R.drawable.son,
+            R.drawable.bo,
+            R.drawable.sen,
+            R.drawable.jbl,
+            R.drawable.beats,
+            R.drawable.at,
+            R.drawable.bo,
+            R.drawable.sc,
+            R.drawable.akg,
+            R.drawable.shure
     };
 
-    String[] cameraNames = {
-            "Canon",
-            "Nikon",
+    String[] mobileNames = {
             "Sony",
-            "Fujifilm",
-            "Panasonic",
-            "Olympus",
-            "Leica",
-            "GoPro",
-            "Pentax",
-            "Hasselblad"
+            "Bose",
+            "Sennheiser",
+            "JBL",
+            "Beats by Dre",
+            "Audio-Technica",
+            "Bang & Olufsen",
+            "Skullcandy",
+            "AKG",
+            "Shure"
+
     };
 
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
+        setContentView(R.layout.activity_headphones_cactivity);
 
         // Initialize views
         buttonCategoriesDrawerToggle = findViewById(R.id.buttonCategoriesDrawerToggle);
@@ -61,16 +62,16 @@ public class MainActivity5 extends AppCompatActivity {
 
         // Set up button to navigate back to MainActivity2 (Categories page)
         buttonCategoriesDrawerToggle.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity5.this, MainActivity2.class);
+            Intent intent = new Intent(HeadphonesCActivity.this, MainActivity2.class);
             startActivity(intent);
         });
 
         // Set up grid items
-        setupGridItems(gridLayout, cameraImages, cameraNames);
+        setupGridItems(gridLayout, mobileImages, mobileNames);
     }
 
     // Method to set up grid items with images and names
-    private void setupGridItems(GridLayout gridLayout, int[] cameraImages, String[] cameraNames) {
+    private void setupGridItems(GridLayout gridLayout, int[] mobileImages, String[] mobileNames) {
         int childCount = gridLayout.getChildCount();
 
         for (int i = 0; i < childCount; i++) {
@@ -81,27 +82,28 @@ public class MainActivity5 extends AppCompatActivity {
             TextView textView = cardView.findViewById(R.id.product_name);
 
             // Check if views are not null and within bounds of the array
-            if (i < cameraImages.length && imageView != null && textView != null) {
+            if (i < mobileImages.length && imageView != null && textView != null) {
                 // Set image and text for each grid item
-                imageView.setImageResource(cameraImages[i]);
-                textView.setText(cameraNames[i]);
-                final String productName = cameraNames[i];
-                final int productImageResId = cameraImages[i]; // Assuming you want to pass the image resource ID
+                imageView.setImageResource(mobileImages[i]);
+                textView.setText(mobileNames[i]);
+
+                // Set click listener for each card view
+                final String productName = mobileNames[i];
+                final int productImageResId = mobileImages[i]; // Assuming you want to pass the image resource ID
                 final String productPrice = "$999.99"; // Replace this with actual price
                 final String productDescription = "Description for " + productName; // Replace with actual description
 
-
-                // Set click listener for each card view
-
                 cardView.setOnClickListener(v -> {
-                    Intent intent = new Intent(MainActivity5.this, ProductActivity.class);
+                    // Start the ProductActivity
+                    Intent intent = new Intent(HeadphonesCActivity.this, ProductActivity.class);
                     intent.putExtra("product_name", productName);
                     intent.putExtra("product_image_res_id", productImageResId);
                     intent.putExtra("product_price", productPrice);
                     intent.putExtra("product_description", productDescription);
                     startActivity(intent);
-                    // Show a toast message on product click
-                    Toast.makeText(MainActivity5.this, productName + " Clicked", Toast.LENGTH_SHORT).show();
+
+                    // Optionally show a Toast message
+                    Toast.makeText(HeadphonesCActivity.this, productName + " Clicked", Toast.LENGTH_SHORT).show();
                 });
             }
         }

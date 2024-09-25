@@ -1,10 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cameraLay"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5">
+    tools:context=".HeadphonesCActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/navbar"
@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="64dp"
-                    android:text="Cameras"
+                    android:text="Headphones"
                     android:textColor="#FFFFFFFF"
                     android:textSize="24sp" />
 
@@ -49,6 +49,9 @@
                     android:src="@drawable/round_shopping_cart_24" />
 
             </RelativeLayout>
+
+
+
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -68,7 +71,7 @@
             android:padding="16dp"
             android:rowCount="10">
 
-            <!-- Grid items will be included here -->
+            <!-- Your grid items -->
             <include
                 layout="@layout/card_item"
                 android:layout_width="0dp"
