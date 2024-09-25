@@ -154,6 +154,12 @@ public class MainActivity2 extends AppCompatActivity {
                         startActivity(intent);
 
                     }
+                    else if ("Bags".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,Bags.class);
+                        startActivity(intent);
+
+                    }
+
 
 
                 });
