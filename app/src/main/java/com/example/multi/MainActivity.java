@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
     int[] images = {
             R.drawable.shoes,    // shoes.jpg
             R.drawable.watch,    // watch.jpg
-            R.drawable.airpods   // AirPods.jpg
+            R.drawable.headphones   // AirPods.jpg
     };
 
     // Array of product names
     String[] productNames = {
             "Shoes",   // Product name for shoes
             "Watch",   // Product name for watch
-            "AirPods"  // Product name for AirPods
+            "Headphones"  // Product name for AirPods
     };
 
     @Override
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             int itemId = item.getItemId();
             if (itemId == R.id.categories) {
                 Toast.makeText(MainActivity.this, "Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(intent);
             }
             drawerLayout.close();
@@ -82,6 +82,30 @@ public class MainActivity extends AppCompatActivity {
 
             productImage.setImageResource(imageArray[i]);
             productName.setText(nameArray[i]);
+
+            // Set up click listener for each card
+            cardView.setOnClickListener(view -> {
+                String selectedProduct = productName.getText().toString();
+
+                switch (selectedProduct) {
+                    case "Shoes":
+                        Intent mobileIntent = new Intent(MainActivity.this, Shoes.class);
+                        startActivity(mobileIntent);
+                        break;
+                    case "Watch":
+                        Intent laptopsIntent = new Intent(MainActivity.this, Watches.class);
+                        startActivity(laptopsIntent);
+                        break;
+                    case "Headphones":
+                        Intent camerasIntent = new Intent(MainActivity.this, HeadphonesCActivity.class);
+                        startActivity(camerasIntent);
+                        break;
+
+                    default:
+                        Toast.makeText(MainActivity.this, "No activity for " + selectedProduct, Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            });
 
             // Add the card view to the container
             cardContainer.addView(cardView);
