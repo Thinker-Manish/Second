@@ -15,6 +15,21 @@
         android:theme="@style/Theme.Multi"
         tools:targetApi="31">
         <activity
+            android:name=".FictionBooksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PoliticalBooksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PsychologyBooksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PhilosophyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BooksActivity"
+            android:exported="false" />
+        <activity
             android:name=".Bags"
             android:exported="false" />
         <activity

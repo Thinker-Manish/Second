@@ -159,6 +159,27 @@ public class MainActivity2 extends AppCompatActivity {
                         startActivity(intent);
 
                     }
+                    else if ("Philosophy".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,PhilosophyActivity.class);
+                        startActivity(intent);
+
+                    }
+                    else if ("Psychology".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,PsychologyBooksActivity.class);
+                        startActivity(intent);
+
+                    }
+                    else if ("Politics".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,PoliticalBooksActivity.class);
+                        startActivity(intent);
+
+                    }
+                    else if ("Fiction".equals(productName)) {
+                        Intent intent=new Intent(MainActivity2.this,FictionBooksActivity.class);
+                        startActivity(intent);
+
+                    }
+
 
 
 
