@@ -26,9 +26,9 @@
         <activity
             android:name=".PhilosophyActivity"
             android:exported="false" />
-        <activity
-            android:name=".BooksActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".BooksActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".Bags"
             android:exported="false" />
@@ -41,9 +41,9 @@
         <activity
             android:name=".ClothingActivity"
             android:exported="false" />
-        <activity
-            android:name=".ClothingCActvity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".ClothingCActvity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".HeadphonesCActivity"
             android:exported="false" />
@@ -61,6 +61,7 @@
             android:exported="false"
             android:label="Second Activity"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".CartActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
