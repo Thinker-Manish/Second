@@ -1,5 +1,6 @@
 package com.example.multi;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -44,10 +45,16 @@ public class CartActivity extends AppCompatActivity {
 
         checkoutButton.setOnClickListener(v -> {
             Toast.makeText(this, "Proceeding to checkout...", Toast.LENGTH_SHORT).show();
-            // Here you could clear the cart after checkout
-            // clearCart();
+
+            // Clear the cart after checkout
+            clearCart();
+
+            // Start OrderSuccessActivity
+            Intent intent = new Intent(CartActivity.this, OrderSuccessActivity.class);
+            startActivity(intent);
         });
     }
+
 
     private List<CartItem> loadCartItems() {
         List<CartItem> items = new ArrayList<>();

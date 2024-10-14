@@ -62,6 +62,8 @@
             android:label="Second Activity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".CartActivity" />
+        <activity android:name=".OrderSuccessActivity"></activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
